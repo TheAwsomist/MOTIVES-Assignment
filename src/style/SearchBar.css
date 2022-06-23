@@ -1,0 +1,37 @@
+.searchbar {
+  width: 50%;
+  -webkit-box-shadow: 5px 5px 17px -2px rgba(199, 199, 199, 0.59);
+          box-shadow: 5px 5px 17px -2px rgba(199, 199, 199, 0.59);
+  height: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 20px;
+}
+
+.searchbar .search-input {
+  border: none;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.searchbar .search-input:focus {
+  outline: none;
+}
+
+.searchbar .search-icon {
+  color: grey;
+  height: 32%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+/*# sourceMappingURL=SearchBar.css.map */
