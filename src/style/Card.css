@@ -19,8 +19,8 @@ a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  -webkit-box-shadow: 6px 5px 22px 1px #c0c0c0;
-          box-shadow: 6px 5px 22px 1px #c0c0c0;
+  border-radius: 10px;
+  border: 0.5px solid lightgrey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,10 +35,18 @@ a {
           justify-content: flex-start;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: 0.2 all ease-in;
+  transition: 0.2 all ease-in;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 
 .artist-card .avatar, .event-card .avatar {
-  border: 0.5px solid black;
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
   border-radius: 40px;
   margin: 0px 10px 0px 10px;
 }
@@ -55,6 +63,16 @@ a {
   color: #878787;
 }
 
+.artist-card:hover {
+  -webkit-box-shadow: 5px 5px 0px 1px #D7D7D7;
+          box-shadow: 5px 5px 0px 1px #D7D7D7;
+}
+
+.artist-card:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .event-card {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -66,7 +84,6 @@ a {
           align-items: flex-start;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px 30px 10px 30px;
   height: 300px;
 }
 
@@ -135,6 +152,7 @@ a {
   }
   .event-card {
     width: 100% !important;
+    padding: 10px 30px 10px 30px;
   }
 }
 

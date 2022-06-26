@@ -14,13 +14,14 @@ export function ArtistCardViewer() {
               <Link
                 to={{
                   pathname: `${artist.name}`,
-                  state: { name: artist.name, fb: artist.facebook_page_url },
+                  state: { name: artist.name, fb: artist.facebook_page_url, image:artist.image_url },
                 }}
               >
                 <ArtistCard
                   key={artist.id}
                   artistname={artist.name}
                   artistfacebook={artist.facebook_page_url}
+                  image={artist.image_url}
                 />
               </Link>
             );
@@ -45,10 +46,10 @@ export function EventCardViewer(){
   );
 }
 
-export function ArtistCard({ artistname, artistfacebook }) {
+export function ArtistCard({ artistname, artistfacebook, image }) {
   return (
     <div className="artist-card">
-      <div className="avatar"></div>
+      <div className="avatar" style={{backgroundImage:`url(${image})`}}></div>
       <section className="artist-info">
         <h3 className="artist-name">{artistname}</h3>
         <h5 className="artist-facebook">{artistfacebook}</h5>

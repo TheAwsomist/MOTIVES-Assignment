@@ -1,0 +1,5 @@
+>Polish responsiveness
+>Add some style
+>Edge cases detection
+>Deploy on Netlify
+>
