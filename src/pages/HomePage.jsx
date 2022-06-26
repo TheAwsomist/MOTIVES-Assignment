@@ -1,14 +1,17 @@
-import React, { useContext } from 'react'
-import SearchBar from '../components/SearchBar'
-import SearchResult from '../components/SearchResult'
-import { ArtistContext } from '../context/ArtistContext';
-import "../style/HomePage.css"
+import React from "react";
+import SearchBar from "../components/SearchBar";
+import SearchResult from "../components/SearchResult";
+import "../style/HomePage.css";
 
 export default function HomePage() {
   return (
-    <div className='homepage'>
-        <SearchBar/>
-        <SearchResult/>
+    // the core idea was to split up the homepage into as many reusable components as possible
+    <div className="homepage">
+      <div className="inner-components">
+        <SearchBar />
+        {/* conditional rendering in the SearchResult Component */}
+        <SearchResult />
+      </div>
     </div>
-  )
+  );
 }

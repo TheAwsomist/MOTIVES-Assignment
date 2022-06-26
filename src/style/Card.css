@@ -1,0 +1,172 @@
+.cardviewer, .events-cardviewer {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+  margin-bottom: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.artist-card, .event-card {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-shadow: 6px 5px 22px 1px #c0c0c0;
+          box-shadow: 6px 5px 22px 1px #c0c0c0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.artist-card .avatar, .event-card .avatar {
+  border: 0.5px solid black;
+  border-radius: 40px;
+  margin: 0px 10px 0px 10px;
+}
+
+.artist-card .artist-name, .event-card .artist-name {
+  margin: 0px 0px 5px 0px;
+  font-weight: 500;
+  color: black;
+}
+
+.artist-card .artist-facebook, .event-card .artist-facebook {
+  margin: 0px 0px 0px 0px;
+  font-weight: 500;
+  color: #878787;
+}
+
+.event-card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 30px 10px 30px;
+  height: 300px;
+}
+
+.event-card .header {
+  font-size: calc(0.5em + 0.5vw);
+  font-weight: 500;
+  border-bottom: 3px solid #c1c1c1;
+  padding-bottom: 5px;
+  width: 100%;
+  color: #3c3c3c;
+}
+
+.event-card .event-details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.event-card .event-details .detail-header {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.event-card .event-details .detail-data {
+  font-size: calc(0.5em + 0.4vw);
+  color: dimgray;
+}
+
+@media screen and (min-width: 700px) {
+  .events-cardviewer {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .events-cardviewer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 421px) {
+  .cardviewer {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .artist-card, .event-card {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 20px 10px;
+    padding-right: 30px;
+  }
+  .artist-card .avatar, .event-card .avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .artist-card .artist-name, .event-card .artist-name {
+    font-size: calc(0.5em + 0.5vw);
+  }
+  .artist-card .artist-facebook, .event-card .artist-facebook {
+    font-size: calc(0.3em + 0.4vw);
+  }
+  .event-card {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .cardviewer, .events-cardviewer {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .event-card {
+    padding: 10px 30px 10px 30px !important;
+    width: 100% !important;
+  }
+  .artist-card, .event-card {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 0px;
+  }
+  .artist-card .avatar, .event-card .avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .artist-card .artist-name, .event-card .artist-name {
+    font-size: calc(1em + 1vw);
+    margin-top: 15px;
+    text-align: center;
+  }
+  .artist-card .artist-facebook, .event-card .artist-facebook {
+    font-size: calc(0.5em + 1vw);
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=Card.css.map */

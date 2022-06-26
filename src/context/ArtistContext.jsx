@@ -3,13 +3,16 @@ import React ,{ createContext, useState } from "react";
 export const ArtistContext = createContext({});
 
 export function ArtistContextProvider({children}) {
-    const [Input, SetInput] = useState("");
+    let [Artist,SetInput] = useState("");
+    let [Events, SetEvents] = useState("");
     const [artists_returned, SetArtists] = useState([]);
     const value ={
-        Input,
+        Artist,
         SetInput,
         artists_returned,
-        SetArtists
+        SetArtists,
+        Events,
+        SetEvents
     };
   return (
     <ArtistContext.Provider value={value}>

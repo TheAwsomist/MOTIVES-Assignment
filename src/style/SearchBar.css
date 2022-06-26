@@ -1,5 +1,5 @@
 .searchbar {
-  width: 50%;
+  width: 100%;
   -webkit-box-shadow: 5px 5px 17px -2px rgba(199, 199, 199, 0.59);
           box-shadow: 5px 5px 17px -2px rgba(199, 199, 199, 0.59);
   height: 4em;
@@ -17,10 +17,15 @@
   padding: 0px 20px;
 }
 
+.searchbar form {
+  width: 90%;
+}
+
 .searchbar .search-input {
   border: none;
   font-weight: 600;
-  font-size: 1em;
+  font-size: calc(0.5em + 0.6vw);
+  width: 100%;
 }
 
 .searchbar .search-input:focus {

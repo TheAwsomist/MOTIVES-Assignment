@@ -1,0 +1,29 @@
+.selected-artist {
+  width: 320px;
+}
+
+.breadcrumb {
+  font-weight: 500;
+  color: #343434;
+  margin-bottom: 30px;
+}
+
+.events-section {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media screen and (min-width: 421px) {
+  .artist-section {
+    height: 12em;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  .artist-section {
+    height: 20em;
+  }
+}
+/*# sourceMappingURL=EventsPage.css.map */

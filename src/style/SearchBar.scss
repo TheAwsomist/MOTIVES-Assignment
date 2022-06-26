@@ -1,21 +1,25 @@
 .searchbar {
-  width: 50%;
+  width: 100%;
   box-shadow: 5px 5px 17px -2px rgba(199, 199, 199, 0.59);
   height: 4em;
-display: flex;
-align-items: center;
-justify-content: space-between;
-box-sizing: border-box;
-padding: 0px 20px;
-  .search-input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px 20px;
+  form {
+    width: 90%;
+  }
+  .search-input {
     border: none;
     font-weight: 600;
-    font-size: 1em;
+    font-size: calc(0.5em + 0.6vw);
+    width: 100%;
   }
-  .search-input:focus{
+  .search-input:focus {
     outline: none;
   }
-  .search-icon{
+  .search-icon {
     color: grey;
     height: 32%;
     width: fit-content;
