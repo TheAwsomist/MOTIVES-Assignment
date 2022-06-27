@@ -68,6 +68,14 @@
           align-items: flex-start;
 }
 
+.homepage .inner-components .title {
+  font-size: calc(2em + 2vw);
+  text-align: center;
+  width: 100%;
+  font-family: 'Play', sans-serif;
+  color: azure;
+}
+
 .homepage .inner-components .results-returned, .homepage .inner-components .no-results-returned {
   color: azure;
   font-weight: 400;

@@ -8,6 +8,7 @@ export default function HomePage() {
     // the core idea was to split up the homepage into as many reusable components as possible
     <div className="homepage">
       <div className="inner-components">
+        <h1 className="title">Star ✦ Finder</h1>
         <SearchBar />
         {/* conditional rendering in the SearchResult Component */}
         <SearchResult />

@@ -55,6 +55,13 @@
     // margin: auto 0;
     align-items: flex-start;
 
+    .title{
+      font-size: calc(2em + 2vw);
+      text-align: center;
+      width: 100%;
+      font-family: 'Play', sans-serif;
+      color: azure;
+    }
     .results-returned, .no-results-returned{
         color: azure;
         font-weight: 400;
