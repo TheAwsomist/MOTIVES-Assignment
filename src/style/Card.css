@@ -19,6 +19,7 @@ a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  background-color: whitesmoke;
   border-radius: 10px;
   border: 0.5px solid lightgrey;
   display: -webkit-box;
@@ -73,12 +74,27 @@ a {
           box-shadow: none;
 }
 
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-top: 10px;
+}
+
 .event-card {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  border: 0.5px solid grey;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -92,8 +108,12 @@ a {
   font-weight: 500;
   border-bottom: 3px solid #c1c1c1;
   padding-bottom: 5px;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #3c3c3c;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .event-card .event-details {
@@ -107,11 +127,13 @@ a {
 .event-card .event-details .detail-header {
   font-weight: 500;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .event-card .event-details .detail-data {
   font-size: calc(0.5em + 0.4vw);
   color: dimgray;
+  text-align: center;
 }
 
 @media screen and (min-width: 700px) {
@@ -154,6 +176,11 @@ a {
     width: 100% !important;
     padding: 10px 30px 10px 30px;
   }
+  .social-media {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -185,6 +212,11 @@ a {
   .artist-card .artist-facebook, .event-card .artist-facebook {
     font-size: calc(0.5em + 1vw);
     text-align: center;
+  }
+  .social-media {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=Card.css.map */

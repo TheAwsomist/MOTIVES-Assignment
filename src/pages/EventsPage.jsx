@@ -10,11 +10,11 @@ export default function EventsPage() {
   const { Events, SetEvents } = useContext(ArtistContext); //the hook of events from artist context
   const history = useHistory(); //Router's function to navigate back
   const location = useLocation();
-  const [loading, setLoading] = useState(true);
-  const [noevent, setNoEvent] = useState(false);
+  const [loading, setLoading] = useState(true); //hook for loading prompt
+  const [noevent, setNoEvent] = useState(false); //hook for error prompt
   useEffect(() => {
-    const data = JSON.parse(sessionStorage.getItem(artist_name));
-    if (data && data[0].venue !== undefined) {
+    const data = JSON.parse(sessionStorage.getItem(artist_name)); //getting data of events from session storage
+    if (data && data[0].venue !== undefined) { //this check makes sure the returned data for subsequent artist name is the data of events and not of the artist itself as that data is also stored in correspondence to the artist name
       SetEvents(data);
       setLoading(false);
     } else {
@@ -35,7 +35,7 @@ export default function EventsPage() {
       });
     }
     return () => {
-      SetEvents([]);
+      SetEvents([]); //clean up function called so it clears the events in the context to avoid any residual value
     };
   }, []);
   return (
@@ -46,14 +46,15 @@ export default function EventsPage() {
     >
       <div className="inner-components" style={{}}>
         <div className="artist-section">
-          <p onClick={() => history.push("/")} className="breadcrumb">
+          <p onClick={() => history.push("/")} className="breadcrumb"> {/* used history of React Router to push back to the main page */}
             {"< Back To Results"}
           </p>
           <div className="selected-artist">
-            <ArtistCard
+            <ArtistCard //data called from the previously passed Link using the useLocation
               artistname={location.state.name}
               artistfacebook={location.state.fb}
               image= {location.state.image}
+              links = {location.state.links}
             />
           </div>
         </div>

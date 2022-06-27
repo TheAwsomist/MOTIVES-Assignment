@@ -1,51 +1,72 @@
-@media screen and (max-width:879px) {
-    .homepage{
-        justify-content: start;
-        .inner-components{
-            margin-top: 20vw;
-            width: 90%;
-        }
+@media screen and (max-width: 879px) {
+  .homepage {
+    justify-content: center;
+    .inner-components {
+      margin-top: 20vw;
+      width: 90%;
     }
-    #events-homepage{
-        justify-content: center;
-        .inner-components{
-            margin-top: 0vw;
-        }
+  }
+  #events-homepage {
+    justify-content: center;
+    .inner-components {
+      margin-top: 0vw;
     }
-    .results-returned{
-        font-size: calc(0.8em + 0.5vw);
-    }
+  }
+  .results-returned {
+    font-size: calc(0.8em + 0.5vw);
+  }
 }
-@media screen and (min-width:880px) {
-    .homepage{
-        justify-content: center;
-        .inner-components{
-            width: 70%;
-        }
-    }
-    .results-returned{
-        font-size: calc(1em + 0.5vw);
-    }
-}
-
-
-.homepage{
-    width: 98vw;
-    height: 42em;
-    // border: 1px solid black;
-    display: flex;
-    flex-direction: column;
+@media screen and (min-width: 880px) {
+  .homepage {
+    justify-content: center;
     align-items: center;
-    // overflow-x: hidden;
-    .inner-components{
-        display: flex;
-        height: fit-content;
-        flex-direction: column;
-        // margin: auto 0;
-        align-items: flex-start;
+    .inner-components {
+      width: 70%;
     }
+  }
+  .results-returned {
+    font-size: calc(1em + 0.5vw);
+  }
 }
 
-.search-result{
-    width: 100%;
+
+.homepage {
+  width: 100vw;
+  min-height: 100vh;
+  // border: 1px solid black;
+  display: flex;
+  background: #4568dc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #b06ab3,
+    #4568dc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b06ab3,
+    #4568dc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  // overflow-x: hidden;
+  .inner-components {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    // margin: auto 0;
+    align-items: flex-start;
+
+    .results-returned, .no-results-returned{
+        color: azure;
+        font-weight: 400;
+    }
+    .no-results-returned{
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+  }
+}
+
+.search-result {
+  width: 100%;
 }

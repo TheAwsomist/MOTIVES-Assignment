@@ -1,8 +1,8 @@
 @media screen and (max-width: 879px) {
   .homepage {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .homepage .inner-components {
     margin-top: 20vw;
@@ -26,6 +26,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .homepage .inner-components {
     width: 70%;
@@ -36,18 +39,17 @@
 }
 
 .homepage {
-  width: 98vw;
-  height: 42em;
+  width: 100vw;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background: #4568dc;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#b06ab3), to(#4568dc));
+  background: linear-gradient(to right, #b06ab3, #4568dc);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .homepage .inner-components {
@@ -64,6 +66,17 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.homepage .inner-components .results-returned, .homepage .inner-components .no-results-returned {
+  color: azure;
+  font-weight: 400;
+}
+
+.homepage .inner-components .no-results-returned {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .search-result {
