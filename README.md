@@ -27,7 +27,15 @@ All required basic features are implemented minus unit tests as I have no prior 
 
 ## Bonus Features (3/3)
 
-- Persistence: Session Storage is used to persist the last searched artist and events data across browser reloads to ensure a bandwidth efficient application
 - Creative: Some added features are:
   - Dynamically generated social icons that lead to the respective social handles of artists (Search Machine Gun Kelly for all icons, as she has all the handles available in the API)
+- Persistence: Session Storage is used to persist the last searched artist and events data across browser reloads to ensure a bandwidth efficient application
 - Deployment: Netlify has been utilized to provide hosting at: https://star-finder.netlify.app/
+
+## Running The Project Locally
+
+- Ensure you have npm and node installed
+- Open a terminal and move to the project directory
+- Type "npm install"
+- Type "npm start"
+- The project should be served locally on localhost:3000
