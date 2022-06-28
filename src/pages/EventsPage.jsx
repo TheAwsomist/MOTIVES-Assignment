@@ -24,7 +24,6 @@ export default function EventsPage() {
         response = response.data; //response is now an array without any header data
         if (response.length !== 0) {
           const arr = new Array(...response); //destructuring the response array into a variable to be pushed to the SetEvent hook
-          console.log(arr);
           SetEvents(arr);
           setLoading(false);
           sessionStorage.setItem(artist_name,JSON.stringify(arr));

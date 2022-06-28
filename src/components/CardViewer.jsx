@@ -14,6 +14,7 @@ export function ArtistCardViewer() {
             //map loads data dynamically of the returned artists
             return (
               <Link
+                key={artist.id.toString()}
                 to={{
                   pathname: `${artist.name}`,
                   state: {
@@ -25,7 +26,7 @@ export function ArtistCardViewer() {
                 }} //used state to send data over link to the component in react router dom
               >
                 <ArtistCard
-                  key={artist.id}
+                  key={artist.id.toString()}
                   artistname={artist.name}
                   artistfacebook={artist.facebook_page_url}
                   image={artist.image_url}
@@ -53,6 +54,7 @@ export function EventCardViewer() {
             const date = event.datetime.substring(0, 10);
             return (
               <EventCard
+                key = {event.id.toString()}
                 country={event.venue.country}
                 city={event.venue.city}
                 venue={event.venue.name}
