@@ -1,5 +1,1 @@
->Polish responsiveness --needs last checking (almost done)
->Add some style --almost done
-
->Deploy on Netlify
->
+> All Done ^ _ ^

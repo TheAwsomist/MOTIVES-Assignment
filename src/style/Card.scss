@@ -32,8 +32,8 @@ a{
   .avatar {
     // border: 0.5px solid black;
     background-position: center;
-    background-size: contain;
-    background-repeat: repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 40px;
     margin: 0px 10px 0px 10px;
   }
@@ -67,7 +67,8 @@ a{
 .event-card{
   flex-direction: column;
   width: 100%;
-  border: 0.5px solid grey;
+  box-shadow: 1px 1px 33px -2px rgba(204,204,204,0.83);
+
   align-items: flex-start;
   box-sizing: border-box;
   height: 300px;
@@ -81,10 +82,23 @@ a{
     margin: 0 auto;
     margin-top: 20px;
   }
+
+  .topright{
+    border-bottom:0.5px solid lightgrey;
+    border-right:0.5px solid lightgrey;
+  }
+
+  .bottom{
+    border-bottom:0.5px solid lightgrey;
+  }
+  .right{
+    border-right:0.5px solid lightgrey;
+  }
   .event-details{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 100%;
+    margin-top: 10px;
 
     .detail-header{
       font-weight: 500;

@@ -46,8 +46,8 @@ a {
 
 .artist-card .avatar, .event-card .avatar {
   background-position: center;
-  background-size: contain;
-  background-repeat: repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 40px;
   margin: 0px 10px 0px 10px;
 }
@@ -94,7 +94,8 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  border: 0.5px solid grey;
+  -webkit-box-shadow: 1px 1px 33px -2px rgba(204, 204, 204, 0.83);
+          box-shadow: 1px 1px 33px -2px rgba(204, 204, 204, 0.83);
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -116,12 +117,26 @@ a {
   margin-top: 20px;
 }
 
+.event-card .topright {
+  border-bottom: 0.5px solid lightgrey;
+  border-right: 0.5px solid lightgrey;
+}
+
+.event-card .bottom {
+  border-bottom: 0.5px solid lightgrey;
+}
+
+.event-card .right {
+  border-right: 0.5px solid lightgrey;
+}
+
 .event-card .event-details {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   width: 100%;
+  margin-top: 10px;
 }
 
 .event-card .event-details .detail-header {

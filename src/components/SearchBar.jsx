@@ -62,7 +62,7 @@ export default function SearchBar() {
           ref={Input}
         />
       </form>
-      <BsSearch className="search-icon" />
+      <BsSearch className="search-icon" onClick={search_handler}/>
     </div>
   );
 }

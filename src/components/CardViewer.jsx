@@ -104,15 +104,15 @@ export function EventCard({ country, city, venue, date }) {
       {/*basic card component to display the data in a styled manner, styling being provided in the css file in the style folder*/}
       <h3 className="header">EVENT DETAILS</h3>
       <div className="event-details">
-        <div className="detail-snippet">
+        <div className="detail-snippet topright">
           <h4 className="detail-header">Country</h4>
           <p className="detail-data">{country}</p>
         </div>
-        <div className="detail-snippet">
+        <div className="detail-snippet bottom">
           <h4 className="detail-header">City</h4>
           <p className="detail-data">{city}</p>
         </div>
-        <div className="detail-snippet">
+        <div className="detail-snippet right">
           <h4 className="detail-header">Venue</h4>
           <p className="detail-data">{venue}</p>
         </div>
